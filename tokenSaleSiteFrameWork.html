@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="description" content="PreSale Token $">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Knuth">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href=".css"/>
+<style>
+
+
+/*START OF VIEWPORT SIZING*/
+.example {
+  padding: 20px;
+  color: black;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {
+    background: DimGray;
+    font-size:55%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {
+    background: DimGray;
+    font-size:60%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {
+    background: DimGray;
+    font-size:70%;
+  }
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {
+    background: DimGray;
+    font-size:90%;
+  }
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {
+    background: DimGray;
+    font-size:100%;
+  }
+
+}
+/*END OF VIEWPORT SIZING*/
+
+h1{
+  text-align:center;
+  font-size:125%;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2; /* Replace with your desired background color */
+  padding: 10px; /* Adjust the padding as needed */
+  z-index: 1000; /* Set a high z-index to ensure the header stays on top of other elements */
+}
+
+/* Style the navigation links */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Adjust this property to position the links as you prefer */
+}
+
+nav li {
+  margin-right: 20px; /* Adjust the spacing between the links */
+}
+
+nav li:last-child {
+  margin-right: 0; /* Remove right margin from the last link */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333; /* Replace with your desired text color */
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+
+/*
+#loginButton{
+  background-color:SlateGray; 
+  border:solid thin black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  cursor:pointer; 
+  margin:5px;
+  cursor:pointer;
+  position:relative;
+  float:right;
+  font-size:200%;
+}
+*/
+
+
+#preSale{
+  position:relative;
+  top:40px;
+  font-size:100%;
+}
+
+
+
+
+.trapFatherDon{
+  padding:10px 10px 10px 20px;
+  background-color:SlateGray; 
+  border:solid thick black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  width:70%;
+  height:100%;
+  position:relative;
+  left:12%;
+  font-size:150%;
+}
+
+
+/*
+#swapboxHeader{text-align:center;}
+
+.swapBox{
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 5px 5px;
+  background-color:SlateGray; 
+  border:solid thick black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  width:50%;
+  height:100%;
+  position:relative;
+  left:22%;
+  font-size:150%;
+}
+
+input{ 
+  width:80%;
+  height:20%;
+  border:solid thick black;
+}
+
+.swap_button{
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  font-size:150%;
+  width:52%;
+  margin:5px 5px 5px 5px;
+  background-color:skyblue; 
+  border:solid thick black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  position:relative;
+  left:21%;
+  cursor:pointer; 
+}
+*/
+
+
+.phases{
+  text-align:center;
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 15px 5px;
+  background-color:SlateGray; 
+  border:solid thick black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size:300%;
+}
+
+#phase1{
+  text-align:center;
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 5px 5px;
+  background-color:SlateGray; 
+}
+
+#phase2{
+  text-align:center;
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 5px 5px;
+  background-color:SlateGray; 
+}
+
+#phase3{
+  text-align:center;
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 5px 5px;
+  background-color:SlateGray; 
+}
+
+
+
+.tokenomics{
+  text-align:center;
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 15px 5px;
+  background-color:SlateGray; 
+  border:solid thick black;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size:300%;
+}
+
+
+.inlineImgs{
+  margin: 2px 2px 2px 2px;
+}
+
+
+
+#nomics1{
+  text-align:center;
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 5px 5px;
+  background-color:SlateGray; 
+}
+
+#nomics2{
+  text-align:center;
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 5px 5px;
+  background-color:SlateGray; 
+}
+
+#nomics3{
+  text-align:center;
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 5px 5px;
+  background-color:SlateGray; 
+}
+
+#trapPaper{
+  text-align:center;
+  padding:8px 8px 8px 8px;
+  font-weight:bold;
+  margin:5px 5px 5px 5px;
+  background-color:SlateGray;
+  cursor:pointer;
+
+}
+
+#ticker-container {
+  width: 100%;
+  height: 40px;
+  background-color: #333;
+  overflow: hidden;
+}
+
+#ticker-container ul {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#ticker-container li {
+  display: inline-block;
+  /*color: #fff;*/
+  font-size: 16px;
+  padding: 0 20px;
+  /*background-color:SlateGray;*/
+  color:green;
+  text-align:center;
+}
+
+#foot_1{
+  background-color:SlateGray;
+  border:solid thick black;
+  text-align:center;
+  font-size:200%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+
+#foot_2{
+  background-color:SlateGray;
+  border:solid thick black;
+  font-size:200%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+
+</style>
+
+
+<script src=".js"></script>
+</head>
+
+
+<body class="example">
+
+<header>
+  <strong>
+    <img 
+    src=".png"
+    style="width:175px;height:55px"
+    >
+  </strong>
+
+   <nav>
+      <!-- Your navigation links here -->
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <!-- Add more navigation links as needed -->
+     </ul>
+<!--
+     <button 
+        id="loginButton" 
+        class="enableEthereumButton" 
+        onmouseover="style.color='red'" 
+        onmouseout="style.color='royalblue'" 
+        onclick="wallet();"> CONNECT
+     </button>
+-->
+   </nav>
+</header>
+
+
+
+
+
+<!------------------mmm----------------------->
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+<div id="ticker-container">
+  <ul>
+    <li>Token.io<br>$TF</li>
+    <li>Token<br>SWAP</li>
+    <li>JOIN<br>DAO</li>
+    <li>STAKE<br>TOKENS</li>
+    <li>PLAY<br>LOTTERY</li>
+    <li>BET<br>SPORTS</li>
+    <li>SPORTS<br>LINE</li>
+    <li>PLAY<br>SLOTS</li>
+    <li>PLAY<br>BOLITA</li>
+    <li>BUY<br>TOKENS</li>
+    <li>AT<br>SWAP</li>
+  </ul>
+</div>
+
+<br><br>
+<br><br>
+
+
+<span id="trapFatherImg">
+  <img 
+   id="el_jefe" 
+   src=".png" alt="HTML5"
+   style="width:100%;height:100%"
+  >
+</span>
+
+
+
+<!--
+<span id="trapFatherImg">
+  <img 
+   id="el_jefe" 
+   src=".png" alt="HTML5"
+   style="width:100%;height:100%"
+  >
+</span>
+-->
+
+
+<!--
+<div class="swapBox">
+ <form>
+  <h1 id="swapboxHeader">SWAP ($MATIC) FOR ($)</h1>
+   <input 
+      type="number"  step="1.00" 
+      min="1.00" max="100.00" 
+      id="enter-amount0" name="enter-amount"  
+      required 
+   /><br>
+  <label>$MATIC</lable>
+
+ <br><br>
+
+   <input 
+      type="number"  step="1.00" 
+      min="1.00" max="100.00" 
+      id="enter-amount1" name="enter-amount"  
+      required 
+   /> <br>
+  <label>$TF</lable>
+
+ </form>
+
+<div id="right_side">
+  <button 
+    class="swap_button"
+  >
+    SWAP
+  </button>
+</div>
+
+</div>
+end of swap box
+-->
+
+
+
+<br><br>
+
+<div class="phases">
+
+ <h1> &#128301; VISION</h1>
+
+  <div id="phase1">
+   <h3>&#x2666; Phase 1</h3>
+     NFT DROP<br>
+     AIR DROP<br>
+     TRADE ($)<br>
+     DEX LIST<br>
+    &#x26CF; LAUNCH STAKING DAPP
+  </div>
+
+  <hr>
+
+  <div id="phase1_img">
+   <img 
+    class="inlineImgs"
+    id="token_coin" 
+    src=".png" alt="HTML5"
+    style="width:100%;height:100%"
+   >
+  </div>
+
+  <hr>
+
+  <div id="phase2">
+   <h3>&#x2666; Phase 2</h3>
+    &#128298; <br>
+    &#x1F578; <br>
+    &#x1F574; <br>
+    &#x1F37D; <br>
+    &#x1F4C8; <br>
+    &#x1F4BC; <br>
+    &#x1F4B0; <br>
+    &#127920; <br>
+
+  </div>  
+
+  <hr>
+
+  <div id="phase1_img">
+   <img 
+    class="inlineImgs"
+    id="token_phone2" 
+    src=".png" alt="HTML5"            
+    style="width:100%;height:100%"
+   >
+  </div>
+
+  <hr>
+
+
+  <div id="phase3">
+   <h3>&#x2666; Phase 3</h3>
+    Token_DAO<br>
+    Control Crypto<br>
+    Dominate
+  </div>
+
+  <hr>
+
+  <div id="phase1_img">
+   <img 
+    class="inlineImgs"
+    id="token_hand2"
+    src=".png" alt="HTML5"             
+    style="width:100%;height:100%"
+   >
+  </div>
+
+</div>
+
+
+<div class="tokenomics">
+
+ <h1>&#128184; TOKENOMICS</h1> 
+
+  <div id="nomics1">
+   <h3>Total Supply:420 MILLION TOKENS</h3>
+      40%: Liquidity Pools<br>
+      20%: Development<br>
+      10%: Investments<br>
+      10%: AirDrop<br>
+      10%: PreSale <br>
+      5%:  Team<br>
+      5%:  Burn
+  </div>
+
+  <hr>
+
+  <div id="nomics2">
+   <h3> &#x1F31B; </h3>
+      &#128178; Create Liq Pools<br>
+      &#x26CF;  Create Income for DAO<br>
+      &#x1F512; Liquidity Lock 6 months
+  </div>  
+
+  <hr>
+
+  <div id="nomics3">
+   <h3> &#128640; Road Map</h3>
+     &#x1F4CA; DAO<br>
+     &#x1F4BB; DEX<br>
+     &#10121;  Lottery<br>
+     &#x1F3C7; SportsBook<br>  
+     &#x1F3B0; Casino DApp
+  </div>
+
+</div>
+
+<!---->
+
+
+
+<br>
+<!--METAMASK LOGIN AND WALLET CONNECTS-->
+<script>
+  window.userWalletAddress = null
+  const loginButton = document.getElementById('loginButton')
+  const userWallet = document.getElementById('userWallet')
+
+const ethereumButton = document.querySelector('.enableEthereumButton');
+const showAccount = document.querySelector('.showAccount');
+
+
+window.ethereum.enable().then(accounts => {
+    const account = accounts[0];
+
+    // Get the balance in wei
+    window.ethereum.send({method: 'eth_getBalance', params: [account, "latest"]}, (error, result) => {
+        if(!error) {
+            // The balance is returned in wei, so we need to convert it to ether
+            const balanceInWei = result.result;
+            const balanceInEther = balanceInWei / 10 ** 18;
+            document.getElementById("ether-balance").innerHTML = `Matic: ${balanceInEther}`;
+        }
+    });
+});
+/////////////////////////////////////////////////////////////////////////////
+async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = account;
+}
+
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+  function toggleButton() {
+    if (!window.ethereum) {
+      loginButton.innerText = 'CONNECT'
+      loginButton.classList.remove('bg-purple-500', 'text-white')
+      loginButton.classList.add('bg-gray-500', 'text-gray-100', 'cursor-not-allowed')
+      return false
+    }
+
+    loginButton.addEventListener('click', loginWithMetaMask)
+  }
+
+  async function loginWithMetaMask() {
+    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+      .catch((e) => {
+        console.error(e.message)
+        return
+      })
+    if (!accounts) { return }
+
+    window.userWalletAddress = accounts[0]
+    userWallet.innerText = window.userWalletAddress
+    loginButton.innerText = 'Sign out of MetaMask'
+
+    loginButton.removeEventListener('click', loginWithMetaMask)
+    setTimeout(() => {
+      loginButton.addEventListener('click', signOutOfMetaMask)
+    }, 200)
+  }
+
+  function signOutOfMetaMask() {
+    window.userWalletAddress = null
+    userWallet.innerText = ''
+    loginButton.innerText = 'Sign in with MetaMask'
+
+    loginButton.removeEventListener('click', signOutOfMetaMask)
+    setTimeout(() => {
+      loginButton.addEventListener('click', loginWithMetaMask)
+    }, 200)
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    toggleButton()
+  });
+</script>
+<!--END OF METAMASK CONNECTIONS-->
+
+ <span id="trapPaper">White Paper</span>
+<br><br>
+<br><br>
+
+
+
+<br><br>
+<br><br>
+
+<footer id="foot_1">SWAP USDT FOR $ AT<br>
+UNISWAP,SUSHISWAP<br>
+<a href="https://get.metamask.io/paypal/?utm_source=tiktok&utm_medium=paidsocial&utm_campaign=tiktok_paypal_auto&utm_content=tiktok_paypal_auto_014&ttclid=E.C.P.CpECDfjdptbR2YWJo73ZEEYqRYEoRyG7Qu8fas6bcv5VFdmSbRZZ_amZaZiZzTrgAupt_NJZ48cLNma-Ggo1GwCCLLu2FWKfvGsSWMDo3cksM5SJWjZVpeaTSwRKOMlvQaHa9wDPlqbKfB5qGiZv9CVxpC4P-ijpeJjwQyDp4M4cIPuoZUCWFe2_ld-g7DA_bd1L5VskREfWWu_ZZimB8weC-AtmjytheMjOac4XIAzFmnGev5v3MiQ3oAzrOuD8dgJwhtiMN9Im-klpImwEYMtid_WokTyceKssmc0Y2FMfo0iekDf5vPGZY5bAxU_89wAH6JYsKfnue7Lst2Eip2LHfDCX0MUeroqAKMHKt5AYb2lwEgR2Mi4wGiDrhYppue5_arkBAyzbOat-jFI-piaVM_pA5TsMxsKgZg&is_ad_landing_page=1">Visit Metamask.io</a>
+<br>
+
+<a href="https://sportsbettinglottery.com">
+  Visit SportsBetLotto
+</a>
+
+<br>
+
+<a href="https://casinodapp.com">
+  Visit Casino Dapp
+</a>
+
+<br>
+
+<a href="https://staketrapfathertoken.com">
+  Stake Token
+</a>
+
+<br>
+
+<a href="https://www.instagram.com/p/Cu5truqMRBa/?igshid=MTc4MmM1YmI2Ng==">
+  Token on InstaGram
+</a>
+
+
+<br>
+
+</footer>
+
+<br><br>
+<br><br>
+
+<footer id="foot_2">
+ <ul>
+   <li>About Us</li>
+   <li>Employment</li>
+   <li>FAQ</li>
+   <li>Plans</li>
+   <li>DAO</li>
+   <li>Partners</li>
+   <li>Exchange Listings</li>
+ </ul>
+</footer>
+
+<br>
+<br>
+<div>Contract address: 0x1111111111111111111111</div>
+
+<div class="col-md-12" <center><b style="font-size: xx-large;color:#B5A058">Token <a href="https://pancakeswap.finance/swap" target="0xEb4E1346200c1e2700569d316514B111dfA36af3"><u style="color:#B5A058">HERE</u></a></b></center>
+</div>
+
+</body>
+
+<script>
+const tickerContainer = document.getElementById('ticker-container');
+const tickerContent = tickerContainer.querySelector('ul');
+
+let tickerPosition = 0;
+const tickerSpeed = 50; // pixels per second
+
+setInterval(() => {
+  // update ticker position
+  tickerPosition -= tickerSpeed / 60; // 60 frames per second
+  tickerContent.style.transform = `translateX(${tickerPosition}px)`;
+
+  // reset ticker position when it goes off the screen
+  if (tickerPosition < -tickerContent.offsetWidth) {
+    tickerPosition = tickerContainer.offsetWidth;
+  }
+}, 1000 / 100); // 60 frames per second
+</script>
+</html>
